@@ -1,0 +1,7 @@
+---
+applications:
+- name: Django-time 
+  memory: 512MB
+  disk_quota: 512MB 
+  command: python manage.py collectstatic --noinput && gunicorn timeseries.wsgi:application
+  path: .
