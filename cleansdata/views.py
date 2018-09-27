@@ -79,7 +79,7 @@ def cleansingdataview(request):
 	q2 = request.GET.get('to')
 	token_value = request.META.get('HTTP_AUTHORIZATION')
 	# print("Hey Your Token is: %s" %token_value)
-	mind_url = "https://gateway.eu1.mindsphere.io/api/iottimeseries/v3/timeseries/'{}'/'{}'/?from='{}'&to='{}'".format(assetid, aspectname, q1, q2).replace("'", "")
+	mind_url = "enter your URL"
 	headersKey = { 'Accept' : 'application/json', 'Content-Type' : 'application/json', 'Authorization' : token_value }	
 	resp = requests.get(mind_url, headers=headersKey)
 	event = resp.content  # IN BYTES
@@ -125,7 +125,7 @@ def cleansingdatauiview(request):
 	q2 = request.GET.get('to')
 	token_value = request.META.get('HTTP_AUTHORIZATION')
 	# logger.INFO(token_value)
-	mind_url = "https://gateway.eu1.mindsphere.io/api/iottimeseries/v3/timeseries/'{}'/'{}'/?from='{}'&to='{}'".format(assetid, aspectname, q1, q2).replace("'", "")
+	mind_url = "enter your URL"
 	headersKey = { 'Accept' : 'application/json', 'Content-Type' : 'application/json', 'Authorization' : token_value }	
 	resp = requests.get(mind_url, headers=headersKey)
 	event = resp.content  # IN BYTES
